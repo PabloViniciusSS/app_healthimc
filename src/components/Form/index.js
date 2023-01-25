@@ -43,7 +43,7 @@ export default function Form() {
         />
         <Button title="Calcular IMC" />
       </View>
-      <ResultImc messageResult={messageIMC} resultImc={imc} />
+      <ResultImc messageResult={messageImc} resultImc={imc} />
     </View>
   )
 }
