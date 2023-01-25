@@ -1,10 +1,10 @@
 import React from 'react'
 import { Text, View } from 'react-native'
-
+import styles from './style.js'
 export default function Title() {
   return (
-    <View>
-      <Text>Aplicativo IMC</Text>
+    <View style={styles.boxTitle}>
+      <Text style={styles.TexTittle}>Aplicativo IMC</Text>
     </View>
   )
 }
