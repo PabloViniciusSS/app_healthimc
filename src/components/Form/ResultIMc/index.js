@@ -6,18 +6,20 @@ export default function ResultImc(props) {
   
   const onShare = async () => {
     const result = await Share.share({
-      message: "Meu IMC hoje é: " + props.result
+      message: "Meu IMC hoje é: " + props.resultImc
     })
   }
 
 
   return (
     <View style={styles.resultImc}>
-      <View style={styles.boxSharedbutton}>
+      <View style={styles.boxSharedButton}>
         {
           props.resultImc != null ?
-        <TouchableOpacity style={styles.shared}>
-          <Text style={styles.shareText}>Share</Text>
+        <TouchableOpacity 
+        onPress={onShare}
+        style={styles.shared}>
+          <Text style={styles.sharedText}>Share</Text>
         </TouchableOpacity>
         :
         <View />

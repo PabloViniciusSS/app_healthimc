@@ -20,6 +20,17 @@ const style = StyleSheet.create({
         color: "#FF0043",
         fontWeight: "bold"       
     },
+    shared:{
+        backgroundColor: "#1877f2",
+        borderRadius: 50,
+        paddingBottom: 5,
+        paddingTop: 5,
+    },
+    sharedText: {
+        color: "#ffffff",
+        fontWeight: "bold",
+        paddingHorizontal: 30,
+    }
 });
 
 export default style
