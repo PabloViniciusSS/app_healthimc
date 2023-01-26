@@ -4,8 +4,8 @@ import { StyleSheet } from "react-native";
 const style = StyleSheet.create({
     resultImc: {
         flex: 1,
-        marginTop: 15,
-        paddingTop: 4,
+        marginTop: 20,
+        paddingTop: 15,
         borderRadius:50,
         alignItems: "center",
         width: "100%",

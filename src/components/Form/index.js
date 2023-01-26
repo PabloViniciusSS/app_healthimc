@@ -4,7 +4,8 @@ import { View,
    Vibration, 
    TouchableOpacity, 
    ScrollView,
-   ScrollViewBase} from 'react-native'
+   Pressable,
+   Keyboard} from 'react-native'
 import React, { useState } from 'react'
 import ResultImc from './ResultIMc'
 import styles from './style'
@@ -19,7 +20,9 @@ export default function Form() {
   const [errorMessage, setErrorMessage] = useState(null)
 
   function imcCalculator(){
-    return setImc((weight/(height * height)).toFixed(2))
+    let heightFormat = height.replace(",",".") ;
+    let weightFormat = height.replace(",",".") ;
+    return setImc((weightFormat/(heightFormat * heightFormat)).toFixed(2))
     
   }
 
@@ -51,7 +54,7 @@ export default function Form() {
     showsVerticalScrollIndicator={false}
     contentContainerStyle={{paddingBottom:100}}
     >
-    <View style={styles.formContext}>
+    <Pressable onPress={Keyboard.dismiss} style={styles.formContext}>
         <View style={styles.form}>
             <Text style={styles.formlabel}>Altura</Text>
             <Text style={styles.erroMessage}>{errorMessage}</Text>
@@ -79,7 +82,7 @@ export default function Form() {
             </TouchableOpacity>
           </View>
       <ResultImc messageResult={messageImc} resultImc={imc} />
-    </View>
+    </Pressable>
     </ScrollView>
   )
 }
