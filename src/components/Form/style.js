@@ -58,6 +58,20 @@ const style = StyleSheet.create({
         height: "50%",
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    listImcs: {
+        marginTop: 20,
+    },
+    resultImcItem: {
+        fontSize: 28,
+        color: "green",
+        height: 50,
+        width: "100%",
+        paddingRight:  20
+    },
+    textResultImcItem: {
+        fontSize: 16,
+        color: "green"
     }
  
     
