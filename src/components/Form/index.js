@@ -41,21 +41,18 @@ export default function Form() {
       setMessageImc("Seu imc é igual: ")
       setTextButton("Calcular Novamente")
       setErrorMessage(null)
-      return
-    }
+    }else{
     verificationImc()
     setImc(null)
     setTextButton("Calcular")
     setMessageImc("Preencha o peso e altura")
+    }
   }
 
   return (
-    <ScrollView
-    showsVerticalScrollIndicator={false}
-    contentContainerStyle={{paddingBottom:100}}
-    >
-    <Pressable onPress={Keyboard.dismiss} style={styles.formContext}>
-        <View style={styles.form}>
+        <View style={styles.formContext}>
+          {imc === null ? 
+          <Pressable onPress={Keyboard.dismiss} style={styles.form}>
             <Text style={styles.formlabel}>Altura</Text>
             <Text style={styles.erroMessage}>{errorMessage}</Text>
             <TextInput
@@ -78,11 +75,22 @@ export default function Form() {
             style={styles.buttonCalculator}
             onPress={() => validationImc()}
             title={textButton} >
-            <Text style={styles.textbuttonCalculator}>{textButton}</Text>
+             <Text style={styles.textbuttonCalculator}>{textButton}</Text>
             </TouchableOpacity>
-          </View>
-      <ResultImc messageResult={messageImc} resultImc={imc} />
-    </Pressable>
-    </ScrollView>
+            </Pressable>
+            :
+            <View style={styles.exhibitionResultImc}>
+             <ResultImc messageResult={messageImc} resultImc={imc} />
+            <TouchableOpacity
+            style={styles.buttonCalculator}
+            onPress={() => validationImc()}
+            title={textButton} >
+            <Text style={styles.textbuttonCalculator}>{textButton}</Text>
+
+            </TouchableOpacity>
+            </View>   
+}   
+      </View>
+
   )
 }

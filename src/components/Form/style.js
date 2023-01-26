@@ -13,7 +13,6 @@ const style = StyleSheet.create({
     }, 
     form: {
         width: "100%",
-
     },
     formlabel:{
             colort: "#0000000",
@@ -54,6 +53,12 @@ const style = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 10,
     },
+    exhibitionResultImc:{
+        width: "100%",
+        height: "50%",
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
  
     
 
