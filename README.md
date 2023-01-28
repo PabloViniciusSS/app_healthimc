@@ -26,3 +26,13 @@ Npm install
 
 ```
 
+
+## 🛠️ Construído com
+
+Foi utilizado nesse projeto:
+
+*React native
+*Expo
+
+
+
