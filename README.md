@@ -1,38 +1,45 @@
 
-# Calculadora de IMC
+
+# app_healthimc
+
+Calculadora para ver qual o seu IMC, ao colocar seu peso e altura o sistema faz o calculo e diz qual seu IMC, alem de ter um historico dos IMC que foram feitos.
 
 
- 
-## 🚀 Começando
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+## Autores
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+- [@PabloVinicius](https://www.github.com/PabloViniciusSS)
 
-### 🔧 Instalação
 
-Apos baixar o arquivo, é necessário rodar o Npm install para instalar as dependências que foram utilizadas no projeto
+## Rodando localmente
 
-Para instalar basta digitar no cmd:
+Clone o projeto
 
-```
-Npm install
-```
-
-E repita:
-
-```
-Npm install
-
+```bash
+  git clone https://link-para-o-projeto
 ```
 
+Entre no diretório do projeto
 
-## 🛠️ Construído com
+```bash
+  cd my-project
+```
 
-Foi utilizado nesse projeto:
+Instale as dependências
 
-*React native
-*Expo
+```bash
+  npm install
+```
 
+Inicie o servidor
+
+```bash
+  npm run start
+```
+
+
+## Stack utilizada
+
+**Front-end:** ReactNative
 
 
